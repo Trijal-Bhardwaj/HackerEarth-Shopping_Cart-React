@@ -1,9 +1,11 @@
 import React from "react";
+import Cart from "./views/cart/index";
 import "./App.css";
 
 function App() {
   return (
-    <div>
+    <div className="App">
+      <Cart />
     </div>
   );
 }
