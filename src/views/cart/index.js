@@ -14,6 +14,33 @@ const Cart = () => {
 
   const [Notification, changeNotification] = useState([]);
 
+  const clearNotif = (id) => {
+    changeNotification((prevState) => {
+      return prevState.filter((item) => item.id !== id);
+    });
+  };
+
+  const pushNotif = (message, delay, type) => {
+    changeNotification((prevState) => {
+      setTimeout(() => {
+        clearNotif(prevState.length + 1);
+      }, delay);
+      return [
+        ...prevState,
+        {
+          message,
+          id: prevState.length + 1,
+          type,
+        },
+      ];
+    });
+  };
+
+  const startcart = (newCart) => {
+    changeCart(newCart);
+    localStorage.setItem("cart", JSON.stringify(newCart));
+  };
+
   return (
     <div>
       <Toast notifList={Notification} />
