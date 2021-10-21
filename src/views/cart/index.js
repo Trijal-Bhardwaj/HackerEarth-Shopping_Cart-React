@@ -64,9 +64,9 @@ const Cart = () => {
     pushNotif(
       `${
         cart[cart.findIndex((item) => item.id === id)].name
-      } is successfully removed from your shopping cart`,
+      } is Successfully Removed From Your Shopping Cart`,
       3000,
-      "success"
+      "Success"
     );
     startcart(newCart);
   };
@@ -74,6 +74,15 @@ const Cart = () => {
   const reloadItems = () => {
     startcart(data.map((item) => ({ ...item, quantity: 1 })));
   };
+
+  useEffect(() => {
+    if (localStorage.getItem("cart"))
+      changeCart(JSON.parse(localStorage.getItem("cart")));
+    else {
+      changeCart(data.map((item) => ({ ...item, quantity: 1 })));
+    }
+    console.log(data);
+  }, []);
 
   return (
     <div>
