@@ -1,6 +1,6 @@
 # React Shopping Cart HackerEarth Front-End Developer Intern Task
 
-### This WebApp [https://] Is Made For The Task "Front-End Intern Assignment" for HackerEarth.
+### This WebApp (React Shopping Cart) [https://] Is Made For The Task "Front-End Intern Assignment" For HackerEarth.
 
 ### Live Hosted Link :- [https://]
 
