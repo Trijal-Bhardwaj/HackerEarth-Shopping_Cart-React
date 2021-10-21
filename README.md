@@ -1,8 +1,8 @@
 # React Shopping Cart HackerEarth Front-End Developer Intern Task
 
-### This WebApp (React Shopping Cart) [https://] Is Made For The Task "Front-End Intern Assignment" For HackerEarth.
+### This WebApp (React Shopping Cart) [https://hackerearth-shopping-cart.herokuapp.com/] Is Made For The Task "Front-End Intern Assignment" For HackerEarth.
 
-### Live Hosted Link :- [https://]
+### Live Hosted Link :- [https://hackerearth-shopping-cart.herokuapp.com/]
 
 ## List Of All Major Libraries & FrameWorks Used :-
 
@@ -23,7 +23,7 @@
 
 Bonus Task is also completed, i.e, an extra 15% discount is provided on those items whose "type" property is set as "fiction".
 
-## Steps To Run This Project on Your Local Server
+## Steps To Run This Project On Your Local Server
 
 1.  Download the Code Zip/Rar File and Extract it.
 2.  Please ensure that latest versions of **"nodeJs" and "npm"** are installed on the system. **"node -v"** & **"npm -v"** commands helps in ensuring that they are properly installed on the system.
