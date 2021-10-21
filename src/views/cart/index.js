@@ -59,6 +59,22 @@ const Cart = () => {
     });
   };
 
+  const deleteItem = (id) => {
+    const newCart = cart.filter((item) => item.id !== id);
+    pushNotif(
+      `${
+        cart[cart.findIndex((item) => item.id === id)].name
+      } is successfully removed from your shopping cart`,
+      3000,
+      "success"
+    );
+    startcart(newCart);
+  };
+
+  const reloadItems = () => {
+    startcart(data.map((item) => ({ ...item, quantity: 1 })));
+  };
+
   return (
     <div>
       <Toast notifList={Notification} />
