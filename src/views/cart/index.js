@@ -41,6 +41,24 @@ const Cart = () => {
     localStorage.setItem("cart", JSON.stringify(newCart));
   };
 
+  const changeQuantity = (id, action) => {
+    changeCart((prevState) => {
+      const newState = prevState.map((item) => {
+        if (item.id === id) {
+          const quantity =
+            action === "increment"
+              ? item.quantity + 1
+              : item.quantity === 1
+              ? item.quantity
+              : item.quantity - 1;
+          return { ...item, quantity };
+        } else return item;
+      });
+      localStorage.setItem("cart", JSON.stringify(newState));
+      return newState;
+    });
+  };
+
   return (
     <div>
       <Toast notifList={Notification} />
